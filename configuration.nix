@@ -6,8 +6,10 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
+      ./hyprland.nix	
+      ./greeter.nix
     ];
 
   # BOOTLOADER :
@@ -60,13 +62,6 @@
 
   programs.firefox.enable = true;
   
-####### HYPRLAND ######## 
-  programs.hyprland.enable = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-
-
-########
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
