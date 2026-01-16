@@ -1,26 +1,14 @@
 { pkgs, ... }:
 
 {
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet \
-          --time --time-format '%I:%M %p | %a • %h | %F' \
-          --cmd 'uwsm start hyprland'";
-        user    = "greeter";
-      };
-    };
-  };
+services.getty.autologinUser = "maxx";
 
-  users.users.greeter = {
-    isNormalUser = false;
-    description  = "greetd greeter user";
-    extraGroups  = [ "video" "audio" ];
-    linger        = true;
-  };
-
-  environment.systemPackages = with pkgs; [
-    greetd.tuigreet
-  ];
+# Stolen from : https://discourse.nixos.org/t/autologin-hyprland/38159/16
+# Dead simple TTY-based auto-login setup for Hyprland
+  environment.loginShellInit = ''
+    # Launch Hyprland on TTY1, return to TTY when exiting
+    if [ "$(tty)" = "/dev/tty1" ]; then
+      exec uwsm start hyprland.desktop # Use `exec Hyprland` to auto-restart on exit/crash instead
+    fi
+  '';
 }
