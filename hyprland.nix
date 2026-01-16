@@ -1,9 +1,11 @@
 { pkgs, ... }:
-
+let unstable = import <nixpkgs-unstable> {};
+in
 {
-  # Enable Hyprland
+  # Active hyprland en mode instable (parce que la branche stable est trop vieille)
   programs.hyprland = {
     enable = true;
+    package = unstable.hyprland;
     withUWSM = true;
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -12,7 +14,7 @@
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with unstable; [
     hyprcursor
     hyprlock
     hyprpaper
