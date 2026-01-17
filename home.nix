@@ -9,7 +9,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-
+    settings.misc.disable_watchdog_warning = true; # A enlever quand le problème de uwsm.desktop sera réglé
     extraConfig = builtins.readFile ./hypr/hyprland.conf;
   };
   xdg.configFile."hypr/monitors.conf".source = ./hypr/monitors.conf;
