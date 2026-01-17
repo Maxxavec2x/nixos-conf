@@ -1,5 +1,5 @@
 { pkgs, ... }:
-let unstable = import <nixpkgs-unstable> {};
+let unstable = import <unstable> {};
 in
 {
   # Active hyprland en mode instable (parce que la branche stable est trop vieille)

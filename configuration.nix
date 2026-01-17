@@ -7,7 +7,7 @@ let
   home-manager = builtins.fetchTarball {
     url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
   };
-  unstable = import <nixpkgs-untable> {
+  unstable = import <unstable> {
 	config.allowUnfree = true;
   };
 in
