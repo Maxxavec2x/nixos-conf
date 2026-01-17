@@ -6,6 +6,7 @@
   home.stateVersion = "25.11";
 
   programs.home-manager.enable = true;
+  programs.waybar.enable = true;
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
