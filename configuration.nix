@@ -51,6 +51,8 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Permet d'activer le service seatd dont à besoin maxx
+  services.seatd.enable = true;
    services.pipewire = {
      enable = true;
      pulse.enable = true;
@@ -62,7 +64,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.maxx = {
      isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "video" "input" "seat" ]; # Enable ‘sudo’ for the user.
      packages = with pkgs; [
        tree
      ];
@@ -75,8 +77,8 @@ in
    environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
-		 kitty
-		 git
+     kitty
+     git
   ];
 
   # Enable the OpenSSH daemon.

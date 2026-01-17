@@ -25,4 +25,8 @@
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+environment.sessionVariables = {
+  WLR_RENDERER_ALLOW_SOFTWARE = "1";
+  LIBGL_ALWAYS_SOFTWARE = "1";
+};
 }

@@ -8,7 +8,7 @@ services.getty.autologinUser = "maxx";
   environment.loginShellInit = ''
     # Launch Hyprland on TTY1, return to TTY when exiting
     if [ "$(tty)" = "/dev/tty1" ]; then
-      exec uwsm start hyprland.desktop # Use `exec Hyprland` to auto-restart on exit/crash instead
+      exec uwsm start hyprland-uwsm.desktop # Use `exec Hyprland` to auto-restart on exit/crash instead
     fi
   '';
 }
