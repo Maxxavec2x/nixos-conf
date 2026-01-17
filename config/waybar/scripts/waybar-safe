@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Wait for default audio sink
+for i in {1..50}; do
+  wpctl get-default Audio/Sink >/dev/null 2>&1 && break
+  sleep 0.2
+done
+
+# Also wait for default source (mic)
+for i in {1..50}; do
+  wpctl get-default Audio/Source >/dev/null 2>&1 && break
+  sleep 0.2
+done
+
+waybar

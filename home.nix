@@ -11,13 +11,20 @@
     enable = true;
     systemd.enable = true;
     settings.misc.disable_watchdog_warning = true; # A enlever quand le problème de uwsm.desktop sera réglé
-    extraConfig = builtins.readFile ./hypr/hyprland.conf;
+    extraConfig = builtins.readFile ./config/hypr/hyprland.conf;
   };
-  xdg.configFile."hypr/monitors.conf".source = ./hypr/monitors.conf;
-  xdg.configFile."hypr/inputs.conf".source = ./hypr/inputs.conf;
-  xdg.configFile."hypr/workspaces.conf".source = ./hypr/workspaces.conf;
-  xdg.configFile."hypr/look.conf".source = ./hypr/look.conf;
-  xdg.configFile."hypr/windows-rules.conf".source = ./hypr/windows-rules.conf;
-  xdg.configFile."hypr/keybinding.conf".source = ./hypr/keybinding.conf;
+
+  #conf hyprland
+  xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
+  xdg.configFile."hypr/inputs.conf".source = ./config/hypr/inputs.conf;
+  xdg.configFile."hypr/workspaces.conf".source = ./config/hypr/workspaces.conf;
+  xdg.configFile."hypr/look.conf".source = ./config/hypr/look.conf;
+  xdg.configFile."hypr/windows-rules.conf".source = ./config/hypr/windows-rules.conf;
+  xdg.configFile."hypr/keybinding.conf".source = ./config/hypr/keybinding.conf;
+
+ # conf waybar
+  xdg.configFile."waybar/config.jsonc".source = ./config/waybar/config.jsonc;
+  xdg.configFile."waybar/style.css".source = ./config/waybar/style.css;
+  xdg.configFile."waybar/scripts".source = ./config/waybar/scripts;
 }
 
