@@ -17,6 +17,7 @@ in
       ./hardware-configuration.nix
       ./hyprland.nix	
       ./greeter.nix
+      ./zsh.nix
       (import "${home-manager}/nixos")
     ];
 
@@ -47,7 +48,6 @@ in
      keyMap = "fr";
      useXkbConfig = false; # use xkb.options in tty.
    };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -67,19 +67,31 @@ in
      extraGroups = [ "wheel" "video" "input" "seat" ]; # Enable ‘sudo’ for the user.
      packages = with pkgs; [
        tree
+       starship
+       oh-my-zsh
      ];
+     shell = pkgs.zsh;
    };
 
   programs.firefox.enable = true;
-  
-  # List packages installed in system profile.
+ 
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+     neovim
+     vim 
      wget
      kitty
      git
   ];
+
+  # Installation des fonts :
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    nerd-fonts.jetbrains-mono
+  ];
+
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
