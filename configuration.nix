@@ -15,6 +15,7 @@ in
   imports =
     [
       ./hardware-configuration.nix
+      ./global-packages.nix
       ./hyprland.nix	
       ./greeter.nix
       ./zsh.nix
@@ -48,19 +49,6 @@ in
      keyMap = "fr";
      useXkbConfig = false; # use xkb.options in tty.
    };
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Permet d'activer le service seatd dont à besoin maxx
-  services.seatd.enable = true;
-   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.maxx = {
      isNormalUser = true;
@@ -69,44 +57,19 @@ in
        tree
        starship
        oh-my-zsh
+       waypaper
+       hyprpaper
      ];
      shell = pkgs.zsh;
    };
 
-  programs.firefox.enable = true;
- 
-  # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-     neovim
-     vim 
-     wget
-     kitty
-     git
-  ];
-
-  # Installation des fonts :
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    nerd-fonts.jetbrains-mono
-  ];
-
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.11"; # Did you read the comment?
-
-  # Pour installer des logiciel non libres
-  nixpkgs.config.allowUnfree = true; 
 
   # Déclarer l'user pour home-manager
   home-manager.users.maxx = import ./home.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-
 
 }
 
