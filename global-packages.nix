@@ -23,6 +23,12 @@
      wget
      kitty
      git
+
+     # Curseur
+     adwaita-icon-theme
+
+     # pour le module de greet :
+     regreet
   ];
 
   # Installation des fonts :

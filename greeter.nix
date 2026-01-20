@@ -1,14 +1,56 @@
 { pkgs, ... }:
 
 {
-services.getty.autologinUser = "maxx";
+services.greetd = {
+  enable = true;
+  settings = {
+    default_session = {
+      command = "start-hyprland -- -c /etc/greetd/hyprland.conf";
+      user = "maxx";
+    };
+  };
+};
+# Permet de créer un fichier dans /etc/greetd/hyprland.conf
+environment.etc."greetd/hyprland.conf".text = ''
+  exec-once = regreet; hyprctl dispatch exit
+  env = GTK_USE_PORTAL,0
+  env = GDK_DEBUG,no-portals
 
-# Stolen from : https://discourse.nixos.org/t/autologin-hyprland/38159/16
-# Dead simple TTY-based auto-login setup for Hyprland
-  environment.loginShellInit = ''
-    # Launch Hyprland on TTY1, return to TTY when exiting
-    if [ "$(tty)" = "/dev/tty1" ]; then
-      exec uwsm start hyprland-uwsm.desktop # Use `exec Hyprland` to auto-restart on exit/crash instead
-    fi
-  '';
+  misc {
+    disable_hyprland_logo = true
+    disable_splash_rendering = true
+    disable_hyprland_guiutils_check = true
+  }
+
+ input {
+  kb_layout = fr
+  kb_variant = azerty
+ }
+ '';
+
+
+  # voir https://github.com/rharish101/ReGreet/blob/main/regreet.sample.toml
+  programs.regreet = {
+      enable = true;
+      settings = {
+	GTK = {
+	  # Whether to use the dark theme
+	  application_prefer_dark_theme = true;
+	  cursor_theme_name = "Adwaita";
+	  cursor_blink = true;
+	  # Icon theme name
+	  icon_theme_name = "Adwaita";
+	  # GTK theme name
+	  theme_name = "Adwaita";
+	};
+	commands = {
+	  # The command used to reboot the system
+	  reboot = [ "systemctl" "reboot" ];
+
+	  # The command used to shut down the system
+	  poweroff = [ "systemctl" "poweroff" ];
+	};
+      };
+  };
+
 }

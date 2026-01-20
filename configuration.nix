@@ -49,7 +49,11 @@ in
      keyMap = "fr";
      useXkbConfig = false; # use xkb.options in tty.
    };
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  services.xserver = {
+    xkb.layout = "fr";
+    xkb.variant = "azerty";
+  };
+
    users.users.maxx = {
      isNormalUser = true;
      extraGroups = [ "wheel" "video" "input" "seat" ]; # Enable ‘sudo’ for the user.
@@ -65,6 +69,11 @@ in
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.11"; # Did you read the comment?
+
+  # Pour le mode sombre
+  programs.dconf.profiles.user.databases = [{
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  }];
 
   # Déclarer l'user pour home-manager
   home-manager.users.maxx = import ./home.nix;

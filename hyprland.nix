@@ -18,6 +18,13 @@ in
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
+  environment.variables = {
+  XCURSOR_THEME = "Adwaita";
+  XCURSOR_SIZE = "24";
+  HYPRCURSOR_THEME = "Adwaita";
+  HYPRCURSOR_SIZE = "24";
+  };
+
   programs.hyprland = {
     enable = true;
     withUWSM = true;
