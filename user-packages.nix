@@ -13,5 +13,6 @@
        fastfetch
        fzf
        libgcc
+       btop
      ];
 }
