@@ -16,6 +16,7 @@ in
     [
       ./hardware-configuration.nix
       ./global-packages.nix
+      ./user-packages.nix
       ./hyprland.nix	
       ./greeter.nix
       ./zsh.nix
@@ -57,13 +58,6 @@ in
    users.users.maxx = {
      isNormalUser = true;
      extraGroups = [ "wheel" "video" "input" "seat" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-       tree
-       starship
-       oh-my-zsh
-       waypaper
-       hyprpaper
-     ];
      shell = pkgs.zsh;
    };
 
