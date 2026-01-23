@@ -17,7 +17,7 @@ in
       ./hardware-configuration.nix
       ./global-packages.nix
       ./user-packages.nix
-      ./hyprland.nix	
+      ./hyprland.nix
       ./greeter.nix
       ./zsh.nix
       (import "${home-manager}/nixos")

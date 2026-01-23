@@ -12,7 +12,7 @@
        wlogout
        fastfetch
        fzf
-       libgcc
        btop
+       gcc 
      ];
 }

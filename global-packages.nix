@@ -29,6 +29,7 @@
 
      # pour le module de greet :
      regreet
+
   ];
 
   # Installation des fonts :
