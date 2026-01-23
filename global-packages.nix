@@ -18,7 +18,6 @@
  
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
-     neovim
      vim 
      wget
      kitty
@@ -39,7 +38,6 @@
     noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
   ];
-
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

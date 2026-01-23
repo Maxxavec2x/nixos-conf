@@ -14,5 +14,6 @@
        fzf
        btop
        gcc 
+       home-manager
      ];
 }

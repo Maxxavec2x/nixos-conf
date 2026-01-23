@@ -32,5 +32,13 @@
 
   # conf nvim
   xdg.configFile."nvim".source = ./config/nvim;
+  programs.neovim = {
+  enable = true;
+  withNodeJs = true;
+  extraPackages = with pkgs; [
+    tree-sitter
+  ];
+};
+
 }
 
