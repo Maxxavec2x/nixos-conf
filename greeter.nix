@@ -6,7 +6,7 @@ services.greetd = {
   settings = {
     default_session = {
       command = "start-hyprland -- -c /etc/greetd/hyprland.conf";
-      user = "maxx";
+      user = "greeter";
     };
   };
 };
