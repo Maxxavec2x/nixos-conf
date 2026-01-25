@@ -1,6 +1,12 @@
 # Installation des packages et services système wide 
 { config, lib, pkgs, ... }:
 {
+
+    imports =
+    [
+      ./firefox.nix
+    ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -14,8 +20,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  programs.firefox.enable = true;
- 
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
      vim 
