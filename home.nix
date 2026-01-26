@@ -21,6 +21,8 @@
   xdg.configFile."hypr/look.conf".source = ./config/hypr/look.conf;
   xdg.configFile."hypr/windows-rules.conf".source = ./config/hypr/windows-rules.conf;
   xdg.configFile."hypr/keybinding.conf".source = ./config/hypr/keybinding.conf;
+  xdg.configFile."hypr/hyprlauncher.conf".source = ./config/hypr/hyprlauncher.conf;
+  xdg.configFile."hypr/xdph.conf".source = ./config/hypr/xdph.conf;
 
  # conf waybar
   xdg.configFile."waybar/config.jsonc".source = ./config/waybar/config.jsonc;

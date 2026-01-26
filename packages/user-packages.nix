@@ -3,17 +3,29 @@
 {
      # Les différents packages accessible à mon user
      users.users.maxx.packages = with pkgs; [
+      # Utilitaires
        tree
-       starship
-       oh-my-zsh
-       waypaper
-       hyprpaper
-       hyprlock
-       wlogout
        fastfetch
        fzf
        btop
        gcc 
+
+      # Shell
+       starship
+       oh-my-zsh
+
+      # Wallpaper
+       waypaper
+       hyprpaper
+      
+      # Lockscreen/exit menus
+       hyprlock
+       wlogout
+        
+      # Home manager
        home-manager
+
+      # App launcher
+       hyprlauncher
      ];
 }
