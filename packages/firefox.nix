@@ -65,6 +65,11 @@
             install_url = "https://addons.mozilla.org/firefox/downloads/file/4637154/istilldontcareaboutcookies-1.1.9.xpi";
             installation_mode = "force_installed";
           };
+          # Dark reader 
+          "addon@darkreader.org" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/file/4665768/darkreader-4.9.119.xpi";
+            installation_mode = "force_installed";
+          };
           # Sponsorblock (pour bloquer les sponso yt)
           "sponsorBlocker@ajay.app" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/file/4644570/sponsorblock-6.1.2.xpi";
