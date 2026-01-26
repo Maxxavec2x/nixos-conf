@@ -9,6 +9,7 @@
        fzf
        btop
        gcc 
+       kdePackages.filelight
 
       # Shell
        starship
@@ -27,5 +28,6 @@
 
       # App launcher
        hyprlauncher
+
      ];
 }
