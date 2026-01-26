@@ -16,7 +16,7 @@
 
       # Wallpaper
        waypaper
-       hyprpaper
+       swww
       
       # Lockscreen/exit menus
        hyprlock

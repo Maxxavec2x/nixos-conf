@@ -9,12 +9,10 @@ in
       hyprland = unstable.hyprland;
       hyprcursor = unstable.hyprcursor;
       hyprlock = unstable.hyprlock;
-      hyprpaper = unstable.hyprpaper;
       aquamarine = unstable.aquamarine;
       hyprutils = unstable.hyprutils;
       hyprgraphics = unstable.hyprgraphics;
       hyprlang = unstable.hyprlang;
-      waypaper = unstable.waypaper;
     })
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
