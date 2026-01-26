@@ -20,6 +20,7 @@ in
       ./hyprland.nix
       ./greeter.nix
       ./zsh.nix
+      ./dark_mode.nix
       (import "${home-manager}/nixos")
     ];
 
@@ -64,10 +65,6 @@ in
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.11"; # Did you read the comment?
 
-  # Pour le mode sombre
-  programs.dconf.profiles.user.databases = [{
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-  }];
 
   # Déclarer l'user pour home-manager
   home-manager.users.maxx = import ./home.nix;

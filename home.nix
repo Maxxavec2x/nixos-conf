@@ -13,7 +13,6 @@
     settings.misc.disable_watchdog_warning = true; # A enlever quand le problème de uwsm.desktop sera réglé
     extraConfig = builtins.readFile ./config/hypr/hyprland.conf;
   };
-
   #conf hyprland
   xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
   xdg.configFile."hypr/inputs.conf".source = ./config/hypr/inputs.conf;

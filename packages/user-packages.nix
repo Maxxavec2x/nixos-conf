@@ -9,7 +9,7 @@
        fzf
        btop
        gcc 
-       kdePackages.filelight
+       baobab
 
       # Shell
        starship
