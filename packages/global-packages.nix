@@ -5,6 +5,7 @@
     imports =
     [
       ./firefox.nix
+      ./plymouth.nix
     ];
 
   # Enable CUPS to print documents.
