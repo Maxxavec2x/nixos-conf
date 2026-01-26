@@ -14,9 +14,9 @@
     "modules-right": [
         "tray",
         "memory",
-	"battery",
-	"backlight",
         "cpu",
+        "battery",
+        "backlight",
         "network",
         "wireplumber#sink",
         "wireplumber#source"

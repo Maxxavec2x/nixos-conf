@@ -21,6 +21,7 @@ in
       ./greeter.nix
       ./zsh.nix
       ./dark_mode.nix
+      ./bluetooth.nix
       (import "${home-manager}/nixos")
     ];
 

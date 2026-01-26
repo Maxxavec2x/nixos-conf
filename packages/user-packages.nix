@@ -12,6 +12,9 @@
        baobab # disk usage analyser dans le launcher
        grimblast # capture d'écran
        dunst # notification daemon
+       
+      # Waybar applet
+       networkmanagerapplet
 
       # Shell
        starship
