@@ -9,7 +9,7 @@
        fzf
        btop
        gcc 
-       baobab
+       baobab # disk usage analyser dans le launcher
 
       # Shell
        starship
