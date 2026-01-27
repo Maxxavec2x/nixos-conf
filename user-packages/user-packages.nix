@@ -8,6 +8,7 @@
     fastfetch
     fzf
     btop
+    bat
     gcc 
     baobab # disk usage analyser dans le launcher
     grimblast # capture d'écran

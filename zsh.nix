@@ -10,7 +10,7 @@ programs = {
         enable = true;
         theme = "robbyrussell";
         plugins = [
-      "git"
+          "git"
           "kubectl"
           "helm"
           "docker"
