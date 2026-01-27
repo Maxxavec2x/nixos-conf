@@ -36,6 +36,9 @@
 
   # Communication
     vesktop
+
+  # Mail
+    thunderbird
   ];
 
   programs.home-manager.enable = true;
