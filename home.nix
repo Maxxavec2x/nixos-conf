@@ -1,18 +1,13 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./user-packages
+  ];
   home.username = "maxx";
   home.homeDirectory = "/home/maxx";
   home.stateVersion = "25.11";
   home.file.".zshrc".source = ./config/.zshrc;  # Sourcing du zshrc
-  programs.home-manager.enable = true;
-  programs.waybar.enable = true;
-  wayland.windowManager.hyprland = {
-    enable = true;
-    systemd.enable = true;
-    settings.misc.disable_watchdog_warning = true; # A enlever quand le problème de uwsm.desktop sera réglé
-    extraConfig = builtins.readFile ./config/hypr/hyprland.conf;
-  };
   #conf hyprland
   xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
   xdg.configFile."hypr/inputs.conf".source = ./config/hypr/inputs.conf;
@@ -33,13 +28,5 @@
 
   # conf nvim
   xdg.configFile."nvim".source = ./config/nvim;
-  programs.neovim = {
-  enable = true;
-  withNodeJs = true;
-  extraPackages = with pkgs; [
-    tree-sitter
-  ];
-};
-
 }
 

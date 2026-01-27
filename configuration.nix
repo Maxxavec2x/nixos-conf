@@ -15,8 +15,7 @@ in
   imports =
     [
       ./hardware-configuration.nix
-      ./packages/global-packages.nix
-      ./packages/user-packages.nix
+      ./global-packages/global-packages.nix
       ./hyprland.nix
       ./greeter.nix
       ./zsh.nix

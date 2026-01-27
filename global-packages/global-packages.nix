@@ -4,7 +4,6 @@
 
     imports =
     [
-      ./firefox.nix
       ./plymouth.nix
     ];
 
