@@ -14,6 +14,7 @@
     baobab # disk usage analyser dans le launcher
     grimblast # capture d'écran
     dunst # notification daemon
+    nwg-displays
 
   # Waybar applet
     networkmanagerapplet
