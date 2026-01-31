@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
   # Utilitaires
     tree
+    file
     fastfetch
     fzf
     btop

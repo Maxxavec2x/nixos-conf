@@ -49,4 +49,12 @@
   # Pour installer des logiciel non libres
   nixpkgs.config.allowUnfree = true; 
 
+
+ # Service de virtualisations/conteneurisation : 
+ virtualisation.podman = {
+  enable = true;
+  dockerCompat = true;
+};
+
+
 }
