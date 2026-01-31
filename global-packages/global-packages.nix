@@ -56,9 +56,6 @@
   dockerCompat = true;
 };
 
-# direnv (permet de rentrer automatiquement dans un environment de dev en fonction du cwd)
-programs.direnv.enable = true;
-programs.direnv.nix-direnv.enable = true;
 
 
 }

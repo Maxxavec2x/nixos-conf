@@ -4,6 +4,7 @@
   ./user-packages.nix
   ./gaming.nix
   ./containers.nix
+  ./direnv.nix
   ];
 }
 
