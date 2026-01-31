@@ -35,7 +35,7 @@
     home-manager
 
   # App launcher
-    hyprlauncher
+    fuzzel
 
   # Communication
     vesktop
