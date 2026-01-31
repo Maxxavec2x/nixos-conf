@@ -22,6 +22,7 @@
   # Shell
     starship
     oh-my-zsh
+    glow # Pour afficher les fichiers md dans le terminal.
 
   # Wallpaper
     waypaper
