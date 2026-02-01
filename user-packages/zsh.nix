@@ -29,6 +29,9 @@
 
     # Prompt pour savoir où est le curseur
     zstyle ':completion:*' select-prompt '%SScrolling: current selection at %p%s'
+    
+    # Traiter / comme séparateur de mot (paths friendly)
+    WORDCHARS=''${WORDCHARS//\/}
 
     # -----------------------------
     # Keybindings Ctrl+← / Ctrl+→
