@@ -1,15 +1,19 @@
-{...}:
+{pkgs,...}:
 {
   programs.zsh = {
   enable = true;
   autosuggestion.enable = true;
   syntaxHighlighting.enable = true;
-
-  oh-my-zsh = {
-    enable = false; # pas de OMZ → shell très rapide
-  };
-
+  plugins = [
+    {
+      name = "powerlevel10k";
+      src = pkgs.zsh-powerlevel10k;
+      file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    }
+  ];
   initContent = ''
+    # config powerlevel10k
+    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
     alias icat="kitty +kitten icat"
     alias kssh="kitty +kitten ssh"
     alias vim="nvim"
@@ -17,8 +21,6 @@
 
     if env | grep -Fq 'DISTROBOX'; then
       PS1="$CONTAINER_ID-$(hostname)$ "
-    else
-      eval "$(starship init zsh)"
     fi
 
     zmodload zsh/complist                 
@@ -27,6 +29,15 @@
 
     # Prompt pour savoir où est le curseur
     zstyle ':completion:*' select-prompt '%SScrolling: current selection at %p%s'
+
+    # -----------------------------
+    # Keybindings Ctrl+← / Ctrl+→
+    # -----------------------------
+    bindkey '^[[1;5D' backward-word
+    bindkey '^[[1;5C' forward-word
+    bindkey '^[[5D' backward-word
+    bindkey '^[[5C' forward-word
+
   '';
 };
 
