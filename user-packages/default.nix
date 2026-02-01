@@ -5,6 +5,7 @@
   ./gaming.nix
   ./containers.nix
   ./direnv.nix
+  ./zsh.nix
   ];
 }
 

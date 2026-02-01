@@ -4,17 +4,8 @@
 programs = {
     zsh = {
       enable = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
-      enableCompletion = true;
-      ohMyZsh = {
-        enable = true;
-        theme = "robbyrussell";
-        plugins = [
-          "git"
-          "direnv"
-        ];
-      };
+      enableCompletion = false;
+      enableGlobalCompInit = false;
     };
   };
 

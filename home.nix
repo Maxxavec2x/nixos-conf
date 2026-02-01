@@ -7,7 +7,7 @@
   home.username = "maxx";
   home.homeDirectory = "/home/maxx";
   home.stateVersion = "25.11";
-  home.file.".zshrc".source = ./config/.zshrc;  # Sourcing du zshrc
+
   #conf hyprland
   xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
   xdg.configFile."hypr/inputs.conf".source = ./config/hypr/inputs.conf;
