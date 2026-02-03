@@ -67,6 +67,11 @@
       autoload -z edit-command-line
       zle -N edit-command-line
       bindkey "^X^E" edit-command-line
+
+      # -----------------------------
+      # Completion: case-insensitive
+      # -----------------------------
+      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
     '';
   };
 }

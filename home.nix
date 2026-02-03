@@ -28,5 +28,8 @@
 
   # conf nvim
   xdg.configFile."nvim".source = ./config/nvim;
+
+  # conf fuzzel (drakula theme https://draculatheme.com/fuzzel)
+  xdg.configFile."fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
 }
 
