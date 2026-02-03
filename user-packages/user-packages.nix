@@ -55,6 +55,7 @@
   };
 
   programs.neovim = {
+    defaultEditor = true;
     enable = true;
     withNodeJs = true;
     extraPackages = with pkgs; [

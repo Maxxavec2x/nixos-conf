@@ -33,6 +33,11 @@
     # Traiter / comme séparateur de mot (paths friendly)
     WORDCHARS=''${WORDCHARS//\/}
 
+    # edit command line with $EDITOR
+    autoload -z edit-command-line
+    zle -N edit-command-line
+    bindkey "^X^E" edit-command-line
+
     # -----------------------------
     # Keybindings Ctrl+← / Ctrl+→
     # -----------------------------
