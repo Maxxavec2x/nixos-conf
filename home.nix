@@ -7,6 +7,10 @@
   home.username = "maxx";
   home.homeDirectory = "/home/maxx";
   home.stateVersion = "25.11";
+  home.sessionVariables = {
+    TERMINAL = "kitty";
+  };
+
   home.file.".p10k.zsh".source = ./config/.p10k.zsh;
   #conf hyprland
   xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;

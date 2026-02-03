@@ -43,6 +43,13 @@
 
   # Mail
     thunderbird
+
+  # file managers:
+    kdePackages.dolphin # Voir https://wiki.nixos.org/wiki/Dolphin pour les plugins en dessous
+    kdePackages.qtsvg # Pour les icones de dolphin
+    kdePackages.kio # needed since 25.11
+    kdePackages.kio-fuse #to mount remote filesystems via FUSE
+    kdePackages.kio-extras #extra protocols support (sftp, fish and more)
   ];
 
   programs.home-manager.enable = true;
