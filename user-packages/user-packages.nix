@@ -15,6 +15,7 @@
     grimblast # capture d'écran
     dunst # notification daemon
     nwg-displays
+    brightnessctl
 
   # Waybar applet
     networkmanagerapplet
