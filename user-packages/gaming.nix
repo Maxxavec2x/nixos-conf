@@ -7,6 +7,7 @@
     protonup-qt
     bottles
     heroic
+    lutris
   ];
   # Steam est installé system wide pour éviter problème de driver
 }
