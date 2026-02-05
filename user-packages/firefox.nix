@@ -98,6 +98,9 @@
           "browser.newtabpage.activity-stream.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+          "sidebar.revamp" = lock-false;
+          "sidebar.verticalTables" = lock-false;
+          "extensions.sidebar.enabled" = lock-false;
         };
       };
     };
