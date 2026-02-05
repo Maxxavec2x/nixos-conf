@@ -1,7 +1,7 @@
 -- Plugin pour ajouter des infos liés au rust
 return {
   "mrcjkb/rustaceanvim",
-  version = "^6",
+  version = "^7",
   lazy = false,
   config = function()
     vim.g.rustaceanvim = {

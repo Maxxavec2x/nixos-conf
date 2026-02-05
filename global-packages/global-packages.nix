@@ -56,6 +56,15 @@
   dockerCompat = true;
 };
 
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+
+
 
 
 }

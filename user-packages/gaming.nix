@@ -4,7 +4,11 @@
 {
   home.packages = with pkgs; [
     appimage-run # pour démarrer les appimages
-  ] ;
+    protonup-qt
+    bottles
+    heroic
+  ];
+  # Steam est installé system wide pour éviter problème de driver
 }
 
 
