@@ -6,7 +6,7 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
-    #./hardware-specific-conf/
+    ./hardware-specific-conf/laptop-lenovo-ideapad/nvidia-dual-gpu.nix
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod" ];
