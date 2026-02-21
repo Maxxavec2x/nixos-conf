@@ -4,7 +4,7 @@
 
     imports =
     [
-      ./plymouth.nix
+#      ./plymouth.nix
     ];
 
   # Enable CUPS to print documents.
