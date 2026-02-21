@@ -32,7 +32,9 @@
 
      # pour le module de greet :
      regreet
-
+    
+     # Pour le secure boot
+     sbctl
   ];
 
   # Installation des fonts :
