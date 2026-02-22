@@ -35,5 +35,8 @@
 
   # conf fuzzel (drakula theme https://draculatheme.com/fuzzel)
   xdg.configFile."fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
+
+  # conf wofi (surtout utile pour theme du menu des sink pour waybar, a retirer le jour où je ferais une conf convenable avec quickshell)
+  xdg.configFile."wofi/style.css".source = ./config/wofi/style.css;
 }
 
