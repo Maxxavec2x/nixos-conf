@@ -8,6 +8,11 @@
     bottles
     heroic
     lutris
+    #wineWowPackages.stable
+    winetricks
+    wineWowPackages.waylandFull
+
+    qbittorrent # ;)
   ];
   # Steam est installé system wide pour éviter problème de driver
 }
