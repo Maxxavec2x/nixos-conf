@@ -6,6 +6,7 @@
   ./containers.nix
   ./direnv.nix
   ./zsh.nix
+  ./wofi-audio.nix
   ];
 }
 
