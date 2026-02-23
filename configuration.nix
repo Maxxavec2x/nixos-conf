@@ -65,7 +65,7 @@ in
 
    users.users.maxx = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "video" "input" "seat" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "video" "input" "seat" "libvirtd" ]; # Enable ‘sudo’ for the user.
      shell = pkgs.zsh;
    };
 
