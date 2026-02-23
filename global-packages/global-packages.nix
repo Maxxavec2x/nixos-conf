@@ -58,9 +58,9 @@
   dockerCompat = true;
 };
 
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true;
+  hardware.graphics = {
+      enable32Bit = true;
+      enable = true;
   };
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
