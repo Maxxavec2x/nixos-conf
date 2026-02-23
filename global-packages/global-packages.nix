@@ -5,6 +5,7 @@
     imports =
     [
 #      ./plymouth.nix
+      ./global-virtualisation.nix
     ];
 
   # Enable CUPS to print documents.
