@@ -9,7 +9,7 @@
       size = nixosConfig.appareil.kittyFontSize;
     };
     
-    themeFile = "Alabaster_Dark";
+    themeFile = "gruvbox-dark-hard";
 
     settings = {
       # terminal
