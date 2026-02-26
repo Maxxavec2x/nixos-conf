@@ -14,6 +14,7 @@ in
 {
   imports =
     [
+      ./options.nix
       ./hardware-configuration.nix
       ./global-packages/global-packages.nix
       ./hyprland.nix

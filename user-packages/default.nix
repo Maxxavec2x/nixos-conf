@@ -8,6 +8,7 @@
   ./zsh.nix
   ./wofi-audio.nix
   ./virtualization.nix
+  ./kitty.nix
   ];
 }
 

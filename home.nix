@@ -27,9 +27,6 @@
   xdg.configFile."waybar/style.css".source = ./config/waybar/style.css;
   xdg.configFile."waybar/scripts".source = ./config/waybar/scripts;
 
-  # conf kitty
-  xdg.configFile."kitty".source = ./config/kitty;
-
   # conf nvim
   xdg.configFile."nvim".source = ./config/nvim;
 
