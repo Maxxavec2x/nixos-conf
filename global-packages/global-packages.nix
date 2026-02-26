@@ -4,7 +4,8 @@
 
     imports =
     [
-#      ./plymouth.nix
+      #./plymouth.nix
+      ./global-virtualisation.nix
     ];
 
   # Enable CUPS to print documents.
@@ -32,7 +33,9 @@
 
      # pour le module de greet :
      regreet
-
+    
+     # Pour le secure boot
+     sbctl
   ];
 
   # Installation des fonts :
@@ -48,13 +51,6 @@
 
   # Pour installer des logiciel non libres
   nixpkgs.config.allowUnfree = true; 
-
-
- # Service de virtualisations/conteneurisation : 
- virtualisation.podman = {
-  enable = true;
-  dockerCompat = true;
-};
 
   hardware.graphics = {
       enable32Bit = true;

@@ -24,8 +24,6 @@ in
       (import "${home-manager}/nixos")
     ];
 
-
-
   # Set your time zone.
   time.timeZone = "Europe/Paris";
 
@@ -47,7 +45,7 @@ in
 
    users.users.maxx = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "video" "input" "seat" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "video" "input" "seat" "libvirtd" "docker" ];
      shell = pkgs.zsh;
    };
 
