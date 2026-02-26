@@ -17,7 +17,12 @@
         swtpm.enable = true;
       };
     };
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
     spiceUSBRedirection.enable = true;
   };
+
   services.spice-vdagentd.enable = true;
 }
