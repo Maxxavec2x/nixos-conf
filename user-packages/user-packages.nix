@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, nixosConfig, ...}:
 
 {
  # Les différents packages accessible à mon user
@@ -53,14 +53,6 @@
   ];
 
   programs.home-manager.enable = true;
-  programs.waybar.enable = true;
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    systemd.enable = true;
-    settings.misc.disable_watchdog_warning = true; # A enlever quand le problème de uwsm.desktop sera réglé
-    extraConfig = builtins.readFile ../config/hypr/hyprland.conf;
-  };
 
   programs.neovim = {
     defaultEditor = true;

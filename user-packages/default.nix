@@ -9,6 +9,7 @@
   ./wofi-audio.nix
   ./virtualization.nix
   ./kitty.nix
+  ./hyprland.nix
   ];
 }
 

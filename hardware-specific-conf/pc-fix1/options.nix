@@ -5,5 +5,6 @@
 {
   config = {
     appareil.kittyFontSize = 12;
+    appareil.sensitivity = -0.5;
   };
 }
