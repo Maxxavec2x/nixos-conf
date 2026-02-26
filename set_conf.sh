@@ -1,4 +1,6 @@
 # Ce script sert à set la conf nix pour utiliser celle du repo
+#
+# TODO MANUELLEMENT : SET LES IMPORT DANS hardware-configuration.nix
 SCRIPT_DIR=$(dirname $(realpath "$0"))
 sudo rm /etc/nixos/configuration.nix
 cd /etc/nixos

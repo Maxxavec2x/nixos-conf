@@ -1,3 +1,5 @@
+# GPUS.NIX : conf lié aux drivers gpu
+
 { config, lib, pkgs, ... }:
 
 {

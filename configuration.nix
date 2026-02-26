@@ -24,18 +24,7 @@ in
       (import "${home-manager}/nixos")
     ];
 
-  # BOOTLOADER :
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev"; 
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "laptop-nixos1"; # Define your hostname.
-
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
