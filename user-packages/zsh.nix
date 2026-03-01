@@ -42,12 +42,6 @@
       bindkey '^[[5D' backward-word
       bindkey '^[[5C' forward-word
 
-      # -----------------------------
-      # Completion menu
-      # -----------------------------
-      #autoload -Uz compinit
-      #compinit
-
       zmodload zsh/complist
       zstyle ':completion:*' menu select=1
       zstyle ':completion:*:default' list-colors ''${(s.:.)LS_COLORS}
