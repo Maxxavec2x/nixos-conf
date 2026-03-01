@@ -45,8 +45,8 @@
       # -----------------------------
       # Completion menu
       # -----------------------------
-      autoload -Uz compinit
-      compinit
+      #autoload -Uz compinit
+      #compinit
 
       zmodload zsh/complist
       zstyle ':completion:*' menu select=1
