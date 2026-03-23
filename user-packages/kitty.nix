@@ -60,11 +60,22 @@
 
     keybindings = {
       "ctrl+shift+backspace" = "change_font_size all 0";
+      
 
+      # sw.kovidgoyal.net/kitty/layouts/
       # window
       "ctrl+shift+enter" = "new_window_with_cwd";
       "ctrl+shift+right" = "next_window";
       "ctrl+shift+left" = "previous_window";
+
+     # zoom pour les windows :
+      "ctrl+left" = "resize_window narrower";
+      "ctrl+right" = "resize_window wider";
+      "ctrl+up" = "resize_window taller";
+      "ctrl+down" = "resize_window shorter 3";
+
+    # reset all windows in the tab to default sizes
+      "ctrl+home" = "resize_window reset"; 
 
       # layout
       "ctrl+shift+l" = "next_layout";
