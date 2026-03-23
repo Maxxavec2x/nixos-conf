@@ -10,6 +10,7 @@
   ./virtualization.nix
   ./kitty.nix
   ./hyprland.nix
+  ./cours-insa.nix
   ];
 }
 

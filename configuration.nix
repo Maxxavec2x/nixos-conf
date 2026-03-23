@@ -17,6 +17,7 @@ in
       ./options.nix
       ./hardware-configuration.nix
       ./global-packages/global-packages.nix
+      ./insa.nix
       ./hyprland.nix
       ./greeter.nix
       ./zsh.nix
@@ -46,7 +47,7 @@ in
 
    users.users.maxx = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "video" "input" "seat" "libvirtd" "docker" ];
+     extraGroups = [ "wheel" "video" "input" "seat" "libvirtd" "docker" "wireshark" ];
      shell = pkgs.zsh;
    };
 

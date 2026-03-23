@@ -62,9 +62,9 @@
       "ctrl+shift+backspace" = "change_font_size all 0";
 
       # window
-      "ctrl+shift+enter" = "new_window";
-      "ctrl+shift+]" = "next_window";
-      "ctrl+shift+[" = "previous_window";
+      "ctrl+shift+enter" = "new_window_with_cwd";
+      "ctrl+shift+right" = "next_window";
+      "ctrl+shift+left" = "previous_window";
 
       # layout
       "ctrl+shift+l" = "next_layout";
@@ -73,8 +73,8 @@
 
       # tabs
       "ctrl+shift+t" = "new_tab";
-      "ctrl+shift+right" = "next_tab";
-      "ctrl+shift+left" = "previous_tab";
+      "ctrl+shift+tab" = "next_tab";
+      #"ctrl+shift+left" = "previous_tab";
       "ctrl+shift+q" = "close_tab";
     };
   };
