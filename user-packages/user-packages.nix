@@ -17,7 +17,7 @@
     nwg-displays
     brightnessctl
     kdePackages.okular
-
+    unzip
   # Waybar applet
     networkmanagerapplet
 
@@ -56,7 +56,12 @@
     obsidian
     notion-app-enhanced 
   # minecraft
-  prismlauncher
+    prismlauncher
+
+  # man pages :
+    man-pages
+    man-pages-posix
+
 
   ];
 
