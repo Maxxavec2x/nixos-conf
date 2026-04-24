@@ -61,8 +61,6 @@
   # man pages :
     man-pages
     man-pages-posix
-
-
   ];
 
   programs.home-manager.enable = true;

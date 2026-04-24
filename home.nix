@@ -13,7 +13,7 @@
 
   home.file.".p10k.zsh".source = ./config/.p10k.zsh;
   #conf hyprland
-  xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
+  #xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
   xdg.configFile."hypr/inputs.conf".source = ./config/hypr/inputs.conf;
   xdg.configFile."hypr/workspaces.conf".source = ./config/hypr/workspaces.conf;
   xdg.configFile."hypr/look.conf".source = ./config/hypr/look.conf;

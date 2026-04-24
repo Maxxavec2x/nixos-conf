@@ -17,7 +17,6 @@ in
       ./options.nix
       ./hardware-configuration.nix
       ./global-packages/global-packages.nix
-      ./insa.nix
       ./hyprland.nix
       ./greeter.nix
       ./zsh.nix
