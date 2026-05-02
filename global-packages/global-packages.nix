@@ -6,6 +6,7 @@
     [
       #./plymouth.nix
       ./global-virtualisation.nix
+      ./kernel.nix
     ];
 
   # Enable CUPS to print documents.
