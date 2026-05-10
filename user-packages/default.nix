@@ -12,6 +12,7 @@
   ./hyprland.nix
   ./music.nix
   ./zoxide.nix
+  ./dolphin.nix
   ];
 }
 
