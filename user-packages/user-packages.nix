@@ -18,6 +18,7 @@
     brightnessctl
     kdePackages.okular
     unzip
+    simple-scan # Pour scanner
   # Waybar applet
     networkmanagerapplet
   # Suite bureautique :

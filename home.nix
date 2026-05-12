@@ -14,8 +14,8 @@
   home.file.".p10k.zsh".source = ./config/.p10k.zsh;
   #conf hyprland
   #xdg.configFile."hypr/monitors.conf".source = ./config/hypr/monitors.conf;
+  #xdg.configFile."hypr/workspaces.conf".source = ./config/hypr/workspaces.conf;
   xdg.configFile."hypr/inputs.conf".source = ./config/hypr/inputs.conf;
-  xdg.configFile."hypr/workspaces.conf".source = ./config/hypr/workspaces.conf;
   xdg.configFile."hypr/look.conf".source = ./config/hypr/look.conf;
   xdg.configFile."hypr/windows-rules.conf".source = ./config/hypr/windows-rules.conf;
   xdg.configFile."hypr/keybinding.conf".source = ./config/hypr/keybinding.conf;

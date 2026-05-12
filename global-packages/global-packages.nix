@@ -7,10 +7,8 @@
       #./plymouth.nix
       ./global-virtualisation.nix
       ./kernel.nix
+      ./printing.nix
     ];
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Permet d'activer le service seatd dont à besoin maxx
   services.seatd.enable = true;
