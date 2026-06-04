@@ -6,5 +6,6 @@
   config = {
     appareil.kittyFontSize = 16;
     appareil.sensitivity = 0;
+    appareil.autoLogin = false;
   };
 }
