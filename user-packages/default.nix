@@ -10,9 +10,13 @@
   ./virtualization.nix
   ./kitty.nix
   ./hyprland.nix
-  ./music.nix
+  #./music.nix
   ./zoxide.nix
   ./dolphin.nix
+  ./reverse.nix
+  ./dark_mode.nix
+  ./claude.nix
+  ./godot.nix
   ];
 }
 

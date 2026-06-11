@@ -13,6 +13,11 @@
       default = 0;
       description = "Hyprland sensitivity";
     };
+    appareil.autoLogin = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+        description = "whether or not activating autologin";
+    };
   };
 }
 

@@ -46,13 +46,17 @@ in
 
    users.users.maxx = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "video" "input" "seat" "libvirtd" "docker" "wireshark" ];
+     extraGroups = [ "wheel" "render" "video" "input" "seat" "libvirtd" "docker" "wireshark" ];
      shell = pkgs.zsh;
    };
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.11"; # Did you read the comment?
 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Déclarer l'user pour home-manager
   home-manager.users.maxx = import ./home.nix;

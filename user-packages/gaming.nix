@@ -7,14 +7,17 @@
     protonup-qt
     bottles
     heroic
-    lutris
+    #lutris
     #wineWowPackages.stable
     winetricks
-    wineWowPackages.waylandFull
+    #wineWowPackages.waylandFull
 
     qbittorrent # ;)
+
   ];
   # Steam est installé system wide pour éviter problème de driver
+  #
+
 }
 
 
