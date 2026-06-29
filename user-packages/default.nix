@@ -16,7 +16,7 @@
   ./reverse.nix
   ./dark_mode.nix
   ./claude.nix
-  ./godot.nix
+  #./godot.nix
   ];
 }
 

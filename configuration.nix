@@ -46,7 +46,7 @@ in
 
    users.users.maxx = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "render" "video" "input" "seat" "libvirtd" "docker" "wireshark" ];
+     extraGroups = [ "cdrom" "disk" "wheel" "render" "video" "input" "seat" "libvirtd" "docker" "wireshark" ];
      shell = pkgs.zsh;
    };
 
