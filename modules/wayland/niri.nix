@@ -36,22 +36,35 @@
             ]
           ];
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+          screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
+          hotkey-overlay.skip-at-startup = _: { };
+          prefer-no-csd = _: { };
 
           input = {
-            keyboard.xkb.layout = "fr";
-            touchpad.tap = _: { };
+            keyboard = {
+              xkb.layout = "fr";
+              numlock = _: { };
+            };
+            touchpad = {
+              tap = _: { };
+              accel-profile = "flat";
+            };
             mouse.accel-profile = "flat";
           };
+
           cursor = {
             xcursor-theme = "Adwaita";
             xcursor-size = 24;
           };
+
           environment = {
             QT_QPA_PLATERFORM = "wayland";
           };
 
-          layout.gaps = 5;
-          prefer-no-csd = _: { };
+          layout = {
+            gaps = 5;
+          };
+
           binds = {
             # Afficher tous les keybinds
             "Mod+Shift+Escape".show-hotkey-overlay = _: { };
@@ -90,9 +103,9 @@
             "Mod+Ctrl+C".center-visible-columns = _: { };
             "Mod+dead_circumflex".consume-or-expel-window-left = _: { };
             "Mod+dollar".consume-or-expel-window-right = _: { };
+            "Mod+R".switch-preset-column-width = _: { };
 
             # Move columns :
-
             "Mod+Ctrl+Left".move-column-left = _: { };
             "Mod+Ctrl+H".move-column-left = _: { };
 
