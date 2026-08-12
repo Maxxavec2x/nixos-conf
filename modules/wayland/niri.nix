@@ -7,13 +7,27 @@
         enable = true;
         package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
       };
+      xdg.portal = {
+        enable = true;
+        extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+        config.niri = {
+          default = [
+            "gnome"
+            "gtk"
+          ];
+          "org.freedesktop.impl.portal.Access" = "gtk";
+          "org.freedesktop.impl.portal.FileChooser" = "gtk";
+          "org.freedesktop.impl.portal.Notification" = "gtk";
+          "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
+        };
+      };
       programs.uwsm = {
         enable = true;
         waylandCompositors.niri = {
           prettyName = "Niri";
           comment = "Niri compositor managed by UWSM";
           binPath = "/run/current-system/sw/bin/niri";
-          #extraArgs = [ "--session" ];
+          extraArgs = [ "--session" ];
         };
       };
     };
@@ -35,6 +49,7 @@
               "finalize"
             ]
           ];
+          #debug.force-pipewire-invalid-modifier = _: { };
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
           screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
           hotkey-overlay.skip-at-startup = _: { };

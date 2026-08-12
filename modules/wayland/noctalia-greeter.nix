@@ -19,6 +19,7 @@
             theme_mode = "dark";
             scheme = "Synced";
             password_style = "random";
+            hide_logo = true;
           };
           user = {
             default = "maxx";

@@ -3,23 +3,14 @@
     { pkgs, ... }:
 
     {
-
       home.file.".p10k.zsh".source = ./p10k.zsh;
       programs.zsh = {
         enable = true;
-
-        # Pas ouf, j'aimerais bien sortir le start de niri d'ici
-        # pour pouvoir changer de wm sans devoir changer ça.
-        # Todo: faire mieux.
-       # profileExtra = ''
-       #   if uwsm check may-start; then
-       #     exec uwsm start niri
-       #   fi
-       # '';
+        enableCompletion = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         shellAliases = {
-            ls = "ls --color";
+          ls = "ls --color";
         };
         history.size = 10000;
 

@@ -32,6 +32,7 @@
       environment.systemPackages = with pkgs; [
         vim
       ];
+      programs.zsh.enable = true;
 
       nix.settings.experimental-features = [
         "nix-command"

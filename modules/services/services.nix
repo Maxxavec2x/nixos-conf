@@ -10,9 +10,13 @@
 
       # Permet d'activer le service seatd dont à besoin maxx
       services.seatd.enable = true;
+      # lib temps réelle requis par pipewire
+      security.rtkit.enable = true;
       services.pipewire = {
         enable = true;
         pulse.enable = true;
+        alsa.enable = true;
+        wireplumber.enable = true;
       };
       services.upower.enable = true;
 
