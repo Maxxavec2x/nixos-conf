@@ -11,9 +11,14 @@
         nixpkgs.source = inputs.nixpkgs;
         enable = true;
         defaultEditor = true;
+        opts = {
+          number = true;
+          relativenumber = true;
+        };
         diagnostic.settings = {
           virtual_text = true;
         };
+
         # Treesitter : parsing/highlighting
         plugins.treesitter = {
           enable = true;
@@ -64,7 +69,30 @@
           };
         };
 
+        globals.mapleader = " ";
+
+        # Plugin pour fuzzy find les fichiers ou le texte
+        plugins.telescope = {
+          enable = true;
+          keymaps = {
+            "<leader><leader>" = {
+              action = "find_files";
+              options.desc = "Find files";
+            };
+            "<leader>fg" = {
+              action = "live_grep";
+              options.desc = "Grep in project";
+            };
+          };
+        };
+
+        # Plugin pour avoir le menu contextuel d'aide pour les keymap:
+        plugins.which-key = {
+          enable = true;
+        };
+
         extraPackages = with pkgs; [
+          ripgrep
           nixfmt
         ];
       };
