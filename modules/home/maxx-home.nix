@@ -20,6 +20,7 @@
         self.homeModules.direnv
         self.homeModules.zeditor
         self.homeModules.helix
+        self.homeModules.nixvim
 
         self.homeModules.virtualization
         self.homeModules.dark_mode
