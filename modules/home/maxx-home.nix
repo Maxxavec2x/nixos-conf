@@ -5,7 +5,11 @@
     { ... }:
     {
       imports = [
+
+        # Browser (web et file)
         self.homeModules.firefox
+        self.homeModules.nautilus
+
         self.homeModules.paquets
         self.homeModules.tmux
         self.homeModules.zoxide

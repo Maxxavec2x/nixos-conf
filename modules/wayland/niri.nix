@@ -86,6 +86,7 @@
 
             # Lancement d'applications
             "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
+            "Mod+E".spawn-sh = lib.getExe pkgs.nautilus;
             "Mod+F".spawn-sh = lib.getExe pkgs.firefox;
             "Mod+A".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
             "Mod+backspace".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call sessionMenu toggle";
