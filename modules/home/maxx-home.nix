@@ -16,6 +16,7 @@
         self.homeModules.zeditor
         self.homeModules.virtualization
         self.homeModules.dark_mode
+        self.homeModules.mpv
       ];
       programs.bash.enable = true;
       home.stateVersion = "26.11";
