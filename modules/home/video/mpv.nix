@@ -20,5 +20,6 @@
           #cache-default = 4000000;
         };
       };
+      programs.mpvpaper.enable = true;
     };
 }
