@@ -12,8 +12,11 @@
         self.homeModules.zsh
         self.homeModules.kitty
         self.homeModules.gaming-apps
+
         self.homeModules.direnv
         self.homeModules.zeditor
+        self.homeModules.helix
+
         self.homeModules.virtualization
         self.homeModules.dark_mode
         self.homeModules.mpv
