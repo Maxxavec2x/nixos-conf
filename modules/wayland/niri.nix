@@ -85,9 +85,9 @@
             "Mod+Shift+Escape".show-hotkey-overlay = _: { };
 
             # Lancement d'applications
-            "Mod+T".spawn-sh = lib.getExe pkgs.kitty;
-            "Mod+E".spawn-sh = lib.getExe pkgs.nautilus;
-            "Mod+F".spawn-sh = lib.getExe pkgs.firefox;
+            "Mod+T".spawn = lib.getExe pkgs.kitty;
+            "Mod+E".spawn = lib.getExe pkgs.nautilus;
+            "Mod+F".spawn = lib.getExe pkgs.firefox;
             "Mod+A".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
             "Mod+backspace".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call sessionMenu toggle";
             "Super+Alt+L".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call lockScreen lock";
