@@ -60,6 +60,7 @@
           if ! (env | grep -Fq 'DISTROBOX'); then # Pour ne pas mettre les alias dans le distrobox
             alias icat="kitty +kitten icat"
             alias kssh="kitty +kitten ssh"
+            alias vim=nvim
             alias cat="bat"
           fi
 
