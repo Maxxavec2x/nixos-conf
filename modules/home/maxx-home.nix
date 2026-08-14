@@ -25,6 +25,7 @@
         self.homeModules.virtualization
         self.homeModules.dark_mode
         self.homeModules.mpv
+        self.homeModules.btop
       ];
       programs.bash.enable = true;
       home.stateVersion = "26.11";

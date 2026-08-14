@@ -16,7 +16,6 @@
         file
         fastfetch
         fzf
-        btop-rocm
         bat
         gcc
         baobab # disk usage analyser dans le launcher

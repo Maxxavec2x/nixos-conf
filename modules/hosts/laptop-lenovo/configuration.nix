@@ -25,7 +25,7 @@
 
       # Settings propre à l'appareil
       home-manager.extraSpecialArgs = {
-        kittyFontSize = 16;
+        kittyFontSize = 14;
         sentitivity = 0;
       };
 
