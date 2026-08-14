@@ -79,6 +79,9 @@
                 "buffer"
               ];
             };
+            snippets = {
+              preset = "luasnip";
+            };
           };
         };
 
@@ -111,6 +114,15 @@
           enable = true;
         };
 
+        # custom snippets
+        plugins.luasnip = {
+          enable = true;
+          settings = {
+            enable_autosnippets = true;
+          };
+        };
+
+        extraConfigLua = import ./_nixvim-snippets.nix;
         extraPackages = with pkgs; [
           ripgrep
           nixfmt
