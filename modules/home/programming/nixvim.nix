@@ -17,6 +17,7 @@
           tabstop = 2;
           shiftwidth = 2;
           expandtab = true;
+          clipboard = "unnamedplus";
         };
         diagnostic.settings = {
           virtual_text = true;
@@ -127,6 +128,7 @@
           ripgrep
           nixfmt
           nerd-fonts.jetbrains-mono
+          wl-clipboard
         ];
       };
     };
