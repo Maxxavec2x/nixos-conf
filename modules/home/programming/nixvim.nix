@@ -14,10 +14,22 @@
         opts = {
           number = true;
           relativenumber = true;
+          tabstop = 2;
+          shiftwidth = 2;
+          expandtab = true;
         };
         diagnostic.settings = {
           virtual_text = true;
         };
+
+        colorschemes.catppuccin = {
+          enable = true;
+          settings = {
+            flavour = "mocha";
+          };
+        };
+
+        plugins.friendly-snippets.enable = true;
 
         # Treesitter : parsing/highlighting
         plugins.treesitter = {
@@ -70,7 +82,14 @@
         };
 
         globals.mapleader = " ";
-
+        keymaps = [
+          {
+            mode = "n";
+            key = "<leader>ca";
+            action = "<cmd>lua vim.lsp.buf.code_action()<cr>";
+            options.desc = "Code action (fix)";
+          }
+        ];
         # Plugin pour fuzzy find les fichiers ou le texte
         plugins.telescope = {
           enable = true;
@@ -94,6 +113,7 @@
         extraPackages = with pkgs; [
           ripgrep
           nixfmt
+          nerd-fonts.jetbrains-mono
         ];
       };
     };
