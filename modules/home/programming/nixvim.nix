@@ -38,6 +38,7 @@
             highlight.enable = true;
             indent.enable = true;
           };
+          grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
         };
 
         # LSP pour Nix
