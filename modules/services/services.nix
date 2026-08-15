@@ -28,5 +28,9 @@
 
       services.flatpak.enable = true;
 
+      # permet de désactiver le wait pour le online boot vu
+      # qu'on l'utilise pas
+      systemd.services.NetworkManager-wait-online.enable = false;
+
     };
 }
