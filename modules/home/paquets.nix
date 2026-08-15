@@ -17,6 +17,7 @@
         fastfetch
         fzf
         bat
+        jq
         gcc
         baobab # disk usage analyser dans le launcher
         #grimblast # capture d'écran
@@ -45,6 +46,9 @@
 
         # permet de créer des conteneurs d'autre distros; utile quand nixos casse les couilles
         distrobox
+
+        # Permet de download des video youtubes (utile pour un plugin)
+        yt-dlp
       ];
     };
 }
