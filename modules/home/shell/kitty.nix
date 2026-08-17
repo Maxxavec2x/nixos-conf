@@ -19,7 +19,7 @@
 
         settings = {
           # terminal
-          background_opacity = "1.0";
+          background_opacity = "0.7";
           background_blur = 1;
           term = "xterm-kitty";
           enable_audio_bell = "no";
