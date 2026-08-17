@@ -16,6 +16,7 @@
         self.homeModules.zsh
         self.homeModules.kitty
         self.homeModules.gaming-apps
+        self.homeModules.fastfetch
 
         self.homeModules.direnv
         self.homeModules.zeditor

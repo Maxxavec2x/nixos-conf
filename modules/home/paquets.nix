@@ -14,7 +14,6 @@
         vim
         tree
         file
-        fastfetch
         fzf
         bat
         jq
