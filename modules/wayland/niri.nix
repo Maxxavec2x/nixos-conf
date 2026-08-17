@@ -43,11 +43,11 @@
         inherit pkgs;
         settings = {
           spawn-at-startup = [
-            (lib.getExe self'.packages.myNoctalia)
             [
               "uwsm"
               "finalize"
             ]
+            (lib.getExe self'.packages.myNoctalia)
           ];
           #debug.force-pipewire-invalid-modifier = _: { };
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
