@@ -19,6 +19,9 @@
         self.nixosModules.virtualization
         self.nixosModules.containers
         self.nixosModules.fonts
+
+        # Pour jouer a bigwalk avec microphone intégré
+        self.nixosModules.audio_relay
         # Les modules home manager sont importé depuis user/maxx.nix
         self.nixosModules.myHomeManager
       ];
