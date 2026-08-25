@@ -1,32 +1,40 @@
-# snippets pour nixvim
+{ lib }:
+let
+  snippetsDir = ./snippets;
 
+  snippetFiles = builtins.attrNames (
+    lib.filterAttrs (name: type: type == "regular" && lib.hasSuffix ".lua" name) (
+      builtins.readDir snippetsDir
+    )
+  );
+
+  varName = file: lib.removeSuffix ".lua" file;
+
+  loadSnippet = file: ''
+    local ${varName file} = (function()
+    ${builtins.readFile (snippetsDir + "/${file}")}
+    end)();
+  '';
+
+  loadedSnippets = lib.concatMapStringsSep "\n" loadSnippet snippetFiles;
+  snippetVars = lib.concatMapStringsSep ", " varName snippetFiles;
+in
 ''
   local ls = require("luasnip")
-  local s = ls.snippet
-  local t = ls.text_node
-  local i = ls.insert_node
-  local fmt = require("luasnip.extras.fmt").fmt
 
-  ls.add_snippets("nix", {
-    s("hmmodule", fmt([[
-      # Conf {}
-      {{ inputs, ... }}:
-      {{
-        flake.homeModules.{} =
-          {{ pkgs, ... }}:
-          {{
-            {}
-          }};
-      }}
-    ]], { i(1, "nom"), i(2, "nomModule"), i(3) })),
-  })
+  ${loadedSnippets}
+
+  ls.add_snippets("nix", { ${snippetVars} });
 
   vim.keymap.set({ "i", "s" }, "<C-l>", function()
-    if ls.jumpable(1) then ls.jump(1) end
+    if ls.jumpable(1) then
+      ls.jump(1)
+    end
   end, { desc = "Snippet: next placeholder" })
 
   vim.keymap.set({ "i", "s" }, "<C-h>", function()
-    if ls.jumpable(-1) then ls.jump(-1) end
+    if ls.jumpable(-1) then
+      ls.jump(-1)
+    end
   end, { desc = "Snippet: previous placeholder" })
-
 ''
