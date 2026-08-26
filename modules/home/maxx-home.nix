@@ -6,6 +6,9 @@
     {
       imports = [
 
+        self.homeModules.niri-homeModule
+        self.homeModules.noctalia-homeModule
+
         # Browser (web et file)
         self.homeModules.firefox
         self.homeModules.nautilus
