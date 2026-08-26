@@ -13,6 +13,6 @@
         enable = true;
       };
       xdg.configFile."noctalia".source =
-        config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-flake-conf/modules/home/windows_manager/noctalia";
+        config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-flake-conf/modules/home/windows_managers/noctalia";
     };
 }

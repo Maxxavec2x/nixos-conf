@@ -147,8 +147,8 @@
           "XF86AudioPlay".action = spawn-sh "${noctalia} msg media toggle";
           "XF86AudioPause".action = spawn-sh "${noctalia} msg media toggle";
 
-          "XF86MonBrightnessUp".action = spawn-sh "${noctalia} msg brightness up";
-          "XF86MonBrightnessDown".action = spawn-sh "${noctalia} msg brightness down";
+          "XF86MonBrightnessUp".action = spawn-sh "${noctalia} msg brightness-up";
+          "XF86MonBrightnessDown".action = spawn-sh "${noctalia} msg brightness-down";
 
           "Alt+M".action = quit;
         };
