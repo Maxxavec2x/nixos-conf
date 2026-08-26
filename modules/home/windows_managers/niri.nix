@@ -51,9 +51,7 @@
           size = 24;
         };
 
-        # Attention : c'était QT_QPA_PLATERFORM dans ton fichier d'origine (typo probable
-        # pour QT_QPA_PLATFORM). Je garde tel quel, corrige si ce n'était pas voulu.
-        environment.QT_QPA_PLATERFORM = "wayland";
+        environment.QT_QPA_PLATFORM = "wayland";
 
         layout.gaps = 5;
 
@@ -152,7 +150,22 @@
           "XF86MonBrightnessDown".action = spawn-sh "${noctalia} msg brightness-down";
 
           "Alt+M".action = quit;
+
         };
+
+        ## CONF WINDOWS RULES :
+        window-rules = [
+          {
+            matches = [
+              {
+                app-id = "^kitty$";
+              }
+            ];
+            default-column-width = {
+              proportion = 0.5;
+            };
+          }
+        ];
       };
     };
 }
