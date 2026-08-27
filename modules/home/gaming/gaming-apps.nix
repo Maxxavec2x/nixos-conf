@@ -20,6 +20,9 @@
 
         # minecraft
         prismlauncher
+
+        # wallpaper engine (steam app for animated wallpaper)
+        linux-wallpaperengine
       ];
     };
 }
