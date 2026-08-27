@@ -23,7 +23,7 @@
 
         # wallpaper engine (steam app for animated wallpaper)
         linux-wallpaperengine
-        inputs.linux-wallpaperengine-gui.packages.${pkgs.system}.default
+        inputs.linux-wallpaperengine-gui.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     };
 }
