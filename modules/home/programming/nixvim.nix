@@ -19,6 +19,13 @@
           expandtab = true;
           clipboard = "unnamedplus";
         };
+        # To remember the last cursor position
+        autoCmd = [
+          {
+            event = "BufReadPost";
+            command = "normal! g`\"";
+          }
+        ];
         diagnostic.settings = {
           virtual_text = true;
         };
