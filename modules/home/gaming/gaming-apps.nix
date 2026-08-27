@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.homeModules.gaming-apps =
     { pkgs, ... }:
@@ -23,6 +23,7 @@
 
         # wallpaper engine (steam app for animated wallpaper)
         linux-wallpaperengine
+        inputs.linux-wallpaperengine-gui.packages.${pkgs.system}.default
       ];
     };
 }
