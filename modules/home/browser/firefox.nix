@@ -109,6 +109,11 @@
               "sidebar.revamp" = lock-false;
               "sidebar.verticalTables" = lock-false;
               "extensions.sidebar.enabled" = lock-false;
+
+              # For hardware acceleration, because gfxInfo block it by default :
+              # /!\ Peut faire lagger sur un vieux hardware, à checker si problème
+              "layers.acceleration.force-enabled" = lock-true;
+              #"gfx.webrender.compositor.force-enabled" = lock-true;
             };
           };
         };
