@@ -64,6 +64,7 @@
           "Mod+F".action = spawn (lib.getExe pkgs.firefox);
           "Mod+A".action = spawn-sh "${noctalia} msg panel-open launcher";
           "Mod+backspace".action = spawn-sh "${noctalia} msg panel-open session";
+          "Mod+End".action = spawn-sh "${noctalia} msg session shutdown";
           "Super+Alt+L".action = spawn-sh "${noctalia} msg session lock";
 
           # Fenêtres
