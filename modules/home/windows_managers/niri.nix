@@ -61,7 +61,7 @@
           # Lancement d'applications
           "Mod+T".action = spawn (lib.getExe pkgs.kitty);
           "Mod+E".action = spawn (lib.getExe pkgs.nautilus);
-          "Mod+F".action = spawn (lib.getExe pkgs.firefox);
+          "Mod+F".action = spawn (lib.getExe pkgs.librewolf);
           "Mod+A".action = spawn-sh "${noctalia} msg panel-open launcher";
           "Mod+backspace".action = spawn-sh "${noctalia} msg panel-open session";
           "Mod+End".action = spawn-sh "${noctalia} msg session shutdown";

@@ -10,7 +10,8 @@
         self.homeModules.noctalia-homeModule
 
         # Browser (web et file)
-        self.homeModules.firefox
+        #self.homeModules.firefox
+        self.homeModules.librewolf
         self.homeModules.nautilus
 
         self.homeModules.paquets
