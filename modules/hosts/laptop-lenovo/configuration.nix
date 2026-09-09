@@ -24,6 +24,9 @@
         self.nixosModules.audio_relay
         # Les modules home manager sont importé depuis user/maxx.nix
         self.nixosModules.myHomeManager
+
+        # Pour le modding minecraft, active nix-ld notamment
+        self.nixosModules.minecraft-modding
       ];
 
       # Settings propre à l'appareil
