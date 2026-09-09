@@ -4,7 +4,7 @@
     { ... }:
 
     {
-      networking.hostName = "laptop-nixos1"; # Define your hostname.
+      networking.hostName = "laptop-nixos1";
 
       # Configure network connections interactively with nmcli or nmtui.
       networking.networkmanager = {
