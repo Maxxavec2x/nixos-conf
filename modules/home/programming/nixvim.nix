@@ -14,8 +14,9 @@
         opts = {
           number = true;
           relativenumber = true;
-          tabstop = 2;
-          shiftwidth = 2;
+          tabstop = 4;
+          softtabstop = 4;
+          shiftwidth = 4;
           expandtab = true;
           clipboard = "unnamedplus";
         };
@@ -54,6 +55,15 @@
           enable = true;
           servers = {
             nixd.enable = true;
+            pyright = {
+              enable = true;
+
+              settings = {
+                python.analysis.extraPaths = [
+                  "."
+                ];
+              };
+            };
           };
         };
 
@@ -100,6 +110,17 @@
             key = "<leader>ca";
             action = "<cmd>lua vim.lsp.buf.code_action()<cr>";
             options.desc = "Code action (fix)";
+          }
+          # Permet de ne pas désindenter après sélection:
+          {
+            mode = "v";
+            key = "<";
+            action = "<gv";
+          }
+          {
+            mode = "v";
+            key = ">";
+            action = ">gv";
           }
         ];
         # Plugin pour fuzzy find les fichiers ou le texte
