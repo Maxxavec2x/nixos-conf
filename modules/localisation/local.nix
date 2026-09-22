@@ -6,7 +6,7 @@
     { ... }:
     {
       # Set your time zone.
-      time.timeZone = "Europe/London";
+      time.timeZone = "Europe/Paris";
 
       # Select internationalisation properties.
       i18n.defaultLocale = "fr_FR.UTF-8";

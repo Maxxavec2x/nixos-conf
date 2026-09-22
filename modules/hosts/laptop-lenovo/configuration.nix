@@ -27,6 +27,9 @@
 
         # Pour le modding minecraft, active nix-ld notamment
         self.nixosModules.minecraft-modding
+
+        # Sandbox malware
+        #self.nixosModules.cape-sandbox
       ];
 
       # Settings propre à l'appareil
