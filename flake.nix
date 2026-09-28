@@ -25,7 +25,11 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    xwayland-satellite.url = "github:Supreeeme/xwayland-satellite"; # Je récupère xwayland-satellite ici et pas dans nixpkgs car je veux la version 8.0.3 minimum
+    xwayland-satellite = {
+      url = "github:Supreeeme/xwayland-satellite/v0.8.3"; # Je récupère xwayland-satellite ici et pas dans nixpkgs car je veux la version 8.0.3 minimum
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
