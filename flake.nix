@@ -25,6 +25,7 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xwayland-satellite.url = "github:Supreeeme/xwayland-satellite"; # Je récupère xwayland-satellite ici et pas dans nixpkgs car je veux la version 8.0.3 minimum
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -6,8 +6,10 @@
       imports = [ inputs.niri.nixosModules.niri ];
       programs.niri.package = pkgs.niri;
       programs.niri.enable = true;
-      # programs.niri.package = pkgs.niri-unstable; # si tu veux la unstable
-
+      # programs.niri.package = pkgs.niri-unstable;
+      environment.systemPackages = [
+        inputs.xwayland-satellite.packages.${pkgs.stdenv.hostPlatform.system}.default
+      ];
       xdg.portal = {
         enable = true;
         extraPortals = [ pkgs.xdg-desktop-portal-gnome ];

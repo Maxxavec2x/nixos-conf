@@ -28,9 +28,6 @@
 
         screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
         hotkey-overlay.skip-at-startup = true;
-
-        # niri-flake gère en général xwayland-satellite tout seul ;
-        # ne garde cette ligne que si le build te dit que la clé n'existe pas ailleurs.
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
         input = {
