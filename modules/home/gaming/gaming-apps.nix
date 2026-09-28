@@ -3,7 +3,13 @@
   flake.homeModules.gaming-apps =
     { pkgs, ... }:
     {
-      programs.mangohud.enable = true;
+      programs.mangohud = {
+        enable = true;
+        settings = {
+          gpu_name = true;
+          gpu_list = "0,1";
+        };
+      };
       home.packages = with pkgs; [
         appimage-run # pour démarrer les appimages
         protonup-qt
