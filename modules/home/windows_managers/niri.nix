@@ -1,5 +1,5 @@
 # Conf
-{ ... }:
+{ inputs, ... }:
 {
   flake.homeModules.niri-homeModule =
     {
@@ -28,7 +28,9 @@
 
         screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
         hotkey-overlay.skip-at-startup = true;
-        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+        xwayland-satellite.path =
+          lib.getExe
+            inputs.xwayland-satellite.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
         input = {
           keyboard = {
