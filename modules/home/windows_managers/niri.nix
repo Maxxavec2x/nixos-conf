@@ -91,7 +91,17 @@
           "Mod+dollar".action = consume-or-expel-window-right;
           "Mod+R".action = switch-preset-column-width;
 
-          # Déplacement de colonnes
+          # Déplacement de colonne dans un autre écran
+          "Mod+Shift+Ctrl+Left".action = move-column-to-monitor-left;
+          "Mod+Shift+Ctrl+H".action = move-column-to-monitor-left;
+          "Mod+Shift+Ctrl+Right".action = move-column-to-monitor-right;
+          "Mod+Shift+Ctrl+L".action = move-column-to-monitor-right;
+          "Mod+Shift+Ctrl+Up".action = move-window-to-monitor-up;
+          "Mod+Shift+Ctrl+K".action = move-window-to-monitor-up;
+          "Mod+Shift+Ctrl+Down".action = move-window-to-monitor-down;
+          "Mod+Shift+Ctrl+J".action = move-window-to-monitor-down;
+
+          # Déplacement de colonne
           "Mod+Ctrl+Left".action = move-column-left;
           "Mod+Ctrl+H".action = move-column-left;
           "Mod+Ctrl+Right".action = move-column-right;
