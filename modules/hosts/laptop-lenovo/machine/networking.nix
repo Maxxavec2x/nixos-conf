@@ -21,7 +21,7 @@
         enable = true;
         settings = {
           Resolve = {
-            DNSSEC = "allow-downgrade";
+            #DNSSEC = "allow-downgrade";
             DNSOverTLS = "false";
             FallbackDNS = [
               "1.1.1.1"
