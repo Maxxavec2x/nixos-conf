@@ -42,6 +42,11 @@
               private_browsing = true;
             };
           };
+          AIControls = {
+            Translations = {
+              Value = "blocked";
+            };
+          };
         };
 
         profiles.default = {
