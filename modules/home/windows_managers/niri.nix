@@ -15,7 +15,6 @@
     {
       programs.niri.settings = {
         prefer-no-csd = true;
-
         spawn-at-startup = [
           {
             command = [
@@ -177,5 +176,22 @@
           }
         ];
       };
+      # Pour ajouter la directive pour inclure monitor.kdl,
+      # parce que nwg-display n'est pas capable d'éditer le fichier config
+      # vu qu'il est dans le store
+      home.activation.niriNwgDisplays = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        config="$HOME/.config/niri/config.kdl"
+
+        if ! grep -qxF 'include "monitor.kdl"' "$config"; then
+          target="$(readlink -f "$config")"
+          tmp="$(mktemp)"
+
+          cat "$target" > "$tmp"
+          printf '\ninclude "monitor.kdl"' >> "$tmp"
+
+          rm "$config"
+          mv "$tmp" "$config"
+        fi
+      '';
     };
 }
