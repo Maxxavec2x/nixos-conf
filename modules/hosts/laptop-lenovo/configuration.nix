@@ -10,6 +10,7 @@
         self.nixosModules.laptop-lenovo-networking
 
         self.nixosModules.myNiri
+        self.nixosModules.umbriel-session
         self.nixosModules.noctalia-greeter
         self.nixosModules.maxx-user
         self.nixosModules.localisation

@@ -7,6 +7,7 @@
       imports = [
 
         self.homeModules.niri-homeModule
+        self.homeModules.umbriel
         self.homeModules.noctalia-homeModule
 
         # Browser (web et file)

@@ -21,10 +21,13 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Niri: Wayland compositor avec scrolling infini
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # umbriel : même chose mais fait par les dev de noctalia, meilleure intégration ?
+    umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
     xwayland-satellite = {
       url = "github:Supreeeme/xwayland-satellite/v0.8.3"; # Je récupère xwayland-satellite ici et pas dans nixpkgs car je veux la version 8.0.3 minimum
       inputs.nixpkgs.follows = "nixpkgs";
