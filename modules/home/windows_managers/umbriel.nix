@@ -44,6 +44,9 @@
       programs.umbriel = {
         enable = true;
         settings = {
+          include.optional.files = [
+            "outputs.toml"
+          ];
           general = {
             autostart = [
               "uwsm finalize"
@@ -92,6 +95,9 @@
               allow_when_inhibited = true;
               repeat = false;
             };
+
+            # Overview :
+            "Mod+Tab" = "overview-toggle";
 
             # Lancement d'applications
             "Mod+T" = "spawn:kitty";
