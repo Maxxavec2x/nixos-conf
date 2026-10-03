@@ -6,6 +6,9 @@
   flake.homeModules.fastfetch =
     { pkgs, ... }:
     {
+      home.packages = with pkgs; [
+        fetch # fastfetch avec logo 3d
+      ];
       programs.fastfetch = {
         enable = true;
         settings = {
