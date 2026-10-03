@@ -53,7 +53,10 @@
             xwayland = true;
           };
 
-          environment.QT_QPA_PLATFORM = "wayland";
+          environment = {
+            QT_QPA_PLATFORM = "wayland";
+            ELECTRON_OZONE_PLATFORM_HINT = "auto";
+          };
 
           layout.gap = 5;
 
