@@ -151,6 +151,8 @@
           };
         };
 
+        plugins.web-devicons.enable = true;
+
         extraConfigLua = import ./_nixvim-snippets.nix { lib = pkgs.lib; };
         extraPackages = with pkgs; [
           ripgrep
