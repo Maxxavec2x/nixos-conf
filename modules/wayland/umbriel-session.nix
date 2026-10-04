@@ -3,21 +3,21 @@
   flake.nixosModules.umbriel-session =
     { pkgs, ... }:
     {
-      nixpkgs.overlays = [ inputs.umbriel.overlays.default ];
+      #nixpkgs.overlays = [ inputs.umbriel.overlays.default ];
 
       services.displayManager.sessionPackages = [
         inputs.umbriel.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
 
-      programs.uwsm = {
-        enable = true;
-        waylandCompositors.umbriel = {
-          prettyName = "Umbriel";
-          comment = "Umbriel compositor managed by UWSM";
-          binPath = "/run/current-system/sw/bin/start-umbriel";
-          extraArgs = [ "--session" ];
-        };
-      };
+      #programs.uwsm = {
+      #  enable = true;
+      #  waylandCompositors.umbriel = {
+      #    prettyName = "Umbriel";
+      #    comment = "Umbriel compositor managed by UWSM";
+      #    binPath = "/run/current-system/sw/bin/start-umbriel";
+      #    extraArgs = [ "--session" ];
+      #  };
+      #};
 
       services.pipewire = {
         enable = true;

@@ -49,7 +49,7 @@
           ];
           general = {
             autostart = [
-              "uwsm finalize"
+              #"uwsm finalize"
               noctalia
             ];
             show_cheatsheet = false;
