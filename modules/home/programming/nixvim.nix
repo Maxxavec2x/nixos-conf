@@ -151,6 +151,13 @@
           };
         };
 
+        # Plugin pour cd dans le projet si vim détecte un .git
+        # + donner un picker télescope
+        plugins.project-nvim = {
+          enable = true;
+          enableTelescope = true;
+        };
+
         plugins.web-devicons.enable = true;
 
         extraConfigLua = import ./_nixvim-snippets.nix { lib = pkgs.lib; };
