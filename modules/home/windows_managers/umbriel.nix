@@ -85,6 +85,10 @@
               match.app_id = "^kitty$";
               default_scrolling_extent = 0.5;
             }
+            {
+              match.app_id = "^librewolf$";
+              default_scrolling_extent = 0.5;
+            }
           ];
 
           keybinds = {
