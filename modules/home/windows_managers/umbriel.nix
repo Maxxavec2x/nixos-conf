@@ -106,7 +106,7 @@
             "Mod+A" = msg "panel-toggle launcher";
             "Mod+BackSpace" = msg "panel-open session";
             "Mod+End" = msg "session shutdown";
-            "Super+Alt+L" = msg "session lock";
+            "Mod+Delete" = msg "session lock";
 
             # Fenêtres
             "Mod+Q" = "window-close";
@@ -141,6 +141,16 @@
             "Mod+Shift+Ctrl+K" = "window-move-to-output-up";
             "Mod+Shift+Ctrl+Down" = "window-move-to-output-down";
             "Mod+Shift+Ctrl+J" = "window-move-to-output-down";
+
+            # Focus d'un autre écran
+            "Mod+Alt+Left" = "output-focus-left";
+            "Mod+Alt+H" = "output-focus-left";
+            "Mod+Alt+Right" = "output-focus-right";
+            "Mod+Alt+L" = "output-focus-right";
+            "Mod+Alt+Up" = "output-focus-up";
+            "Mod+Alt+K" = "output-focus-up";
+            "Mod+Alt+Down" = "output-focus-down";
+            "Mod+Alt+J" = "output-focus-down";
 
             # Déplacement de colonne / fenêtre
             "Mod+Ctrl+Left" = "column-move-left";
