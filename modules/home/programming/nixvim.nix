@@ -122,6 +122,32 @@
             key = ">";
             action = ">gv";
           }
+          # keymaps pour git
+          {
+            key = "<leader>hn";
+            action = "<cmd>Gitsigns next_hunk<cr>";
+            options.desc = "Hunk suivant";
+          }
+          {
+            key = "<leader>hN";
+            action = "<cmd>Gitsigns prev_hunk<cr>";
+            options.desc = "Hunk précédent";
+          }
+          {
+            key = "<leader>hp";
+            action = "<cmd>Gitsigns preview_hunk<cr>";
+            options.desc = "Prévisualiser le hunk";
+          }
+          {
+            key = "<leader>hs";
+            action = "<cmd>Gitsigns stage_hunk<cr>";
+            options.desc = "Stage le hunk";
+          }
+          {
+            key = "<leader>hr";
+            action = "<cmd>Gitsigns reset_hunk<cr>";
+            options.desc = "Reset le hunk";
+          }
         ];
         # Plugin pour fuzzy find les fichiers ou le texte
         plugins.telescope = {
@@ -158,6 +184,13 @@
           enableTelescope = true;
         };
 
+        # Plugin pour les diffs git
+        plugins.gitsigns = {
+          enable = true;
+          settings.current_line_blame = true;
+        };
+
+        # Plugin pour avoir les icones notamment dans Télescope
         plugins.web-devicons.enable = true;
 
         extraConfigLua = import ./_nixvim-snippets.nix { lib = pkgs.lib; };
