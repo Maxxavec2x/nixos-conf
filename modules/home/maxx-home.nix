@@ -22,6 +22,7 @@
         self.homeModules.kitty
         self.homeModules.gaming-apps
         self.homeModules.fastfetch
+        self.homeModules.nh
 
         self.homeModules.direnv
         self.homeModules.zeditor
