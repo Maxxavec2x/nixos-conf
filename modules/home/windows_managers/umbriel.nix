@@ -61,7 +61,11 @@
             ELECTRON_OZONE_PLATFORM_HINT = "auto";
           };
 
-          layout.gap = 5;
+          layout = {
+            mode = "scrolling";
+            gap = 5;
+            scrolling.default_extent_fraction = 0.5;
+          };
 
           input = {
             keyboard = {
