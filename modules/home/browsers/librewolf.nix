@@ -16,6 +16,7 @@
             "https://claude.ai"
             "https://youtube.com"
             "https://github.com"
+            "https://anime-sama.to"
           ];
 
           SearchEngines = {
