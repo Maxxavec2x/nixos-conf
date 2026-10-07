@@ -40,10 +40,6 @@
     linux-wallpaperengine-gui = {
       url = "github:Maxxavec2x/linux-wallpaperengine-gui-flake";
     };
-    capev2 = {
-      url = "path:/home/maxx/projects/CAPEv2";
-    };
-
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
