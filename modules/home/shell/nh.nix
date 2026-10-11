@@ -8,7 +8,7 @@
         enable = true;
         clean.enable = true;
         clean.extraArgs = "--keep-since 4d --keep 3";
-        osFlake = "/home/maxx/nixos-flake-conf/"; # sets NH_OS_FLAKE variable for you
+        osFlake = "/home/maxx/nixos-conf/"; # sets NH_OS_FLAKE variable for you
       };
     };
 }

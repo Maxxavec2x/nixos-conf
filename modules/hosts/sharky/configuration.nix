@@ -1,0 +1,52 @@
+{ self, ... }:
+{
+  flake.nixosModules.sharky-configuration =
+    { pkgs, ... }:
+    {
+      imports = [
+        self.nixosModules.sharky-hardware
+        self.nixosModules.sharky-bootloader
+        self.nixosModules.sharky-gpu
+        self.nixosModules.sharky-networking
+
+        #self.nixosModules.myNiri
+        self.nixosModules.umbriel-session
+        self.nixosModules.noctalia-greeter
+        self.nixosModules.maxx-user
+        self.nixosModules.localisation
+        self.nixosModules.bluetooth
+        self.nixosModules.services
+        self.nixosModules.steam
+        self.nixosModules.virtualization
+        self.nixosModules.containers
+        self.nixosModules.fonts
+
+        # Les modules home manager sont importé depuis user/maxx.nix
+        self.nixosModules.myHomeManager
+
+        # Pour le modding minecraft, active nix-ld notamment
+        #self.nixosModules.minecraft-modding
+
+        # Sandbox malware
+        #self.nixosModules.cape-sandbox
+      ];
+
+      # Settings propre à l'appareil
+      home-manager.extraSpecialArgs = {
+        kittyFontSize = 12;
+        sentitivity = -0.5;
+      };
+
+      environment.systemPackages = with pkgs; [
+        vim
+      ];
+      programs.zsh.enable = true;
+
+      nix.settings.experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      nixpkgs.config.allowUnfree = true;
+      system.stateVersion = "26.11";
+    };
+}
