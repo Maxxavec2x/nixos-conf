@@ -26,7 +26,7 @@
       # Enable the OpenSSH daemon.
       services.openssh.enable = true;
 
-      services.flatpak.enable = true;
+      ## TODO: Faire un fichier pour flatpak, un autre pour sshd, etc...
 
       # permet de désactiver le wait pour le online boot vu
       # qu'on l'utilise pas
