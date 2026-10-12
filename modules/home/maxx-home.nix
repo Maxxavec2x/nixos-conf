@@ -1,7 +1,32 @@
 { self, ... }:
 {
 
-  flake.homeModules.maxx-home =
+  # Module home manager qui peut être include par tout les hosts
+  flake.homeModules.maxx-home-base =
+    { ... }:
+    {
+      imports = [
+
+        self.homeModules.tmux
+        self.homeModules.zoxide
+        self.homeModules.zsh
+        self.homeModules.fastfetch
+        self.homeModules.nh
+
+        self.homeModules.direnv
+        self.homeModules.nixvim
+
+        self.homeModules.btop
+
+        self.homeModules.paquets-utilitaires
+      ];
+      programs.bash.enable = true;
+      home.stateVersion = "26.11";
+      home.username = "maxx";
+      home.homeDirectory = "/home/maxx";
+    };
+
+  flake.homeModules.maxx-home-desktop =
     { ... }:
     {
       imports = [
@@ -15,30 +40,18 @@
         self.homeModules.librewolf
         self.homeModules.nautilus
 
-        self.homeModules.paquets
-        self.homeModules.tmux
-        self.homeModules.zoxide
-        self.homeModules.zsh
+        self.homeModules.paquets-desktop
         self.homeModules.kitty
         self.homeModules.gaming-apps
-        self.homeModules.fastfetch
-        self.homeModules.nh
 
-        self.homeModules.direnv
         self.homeModules.zeditor
         self.homeModules.helix
-        self.homeModules.nixvim
         self.homeModules.minecraft-modding
 
         self.homeModules.virtualization
         self.homeModules.dark_mode
         self.homeModules.mpv
-        self.homeModules.btop
       ];
-      programs.bash.enable = true;
-      home.stateVersion = "26.11";
-      home.username = "maxx";
-      home.homeDirectory = "/home/maxx";
       home.sessionVariables = {
         TERMINAL = "kitty";
         XCURSOR_THEME = "Adwaita";

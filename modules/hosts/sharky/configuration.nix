@@ -36,6 +36,9 @@
         kittyFontSize = 12;
         sentitivity = -0.5;
       };
+      maxx.profil = {
+        desktop = true;
+      };
 
       environment.systemPackages = with pkgs; [
         vim
