@@ -5,7 +5,7 @@
 
     {
       networking.hostName = "sharky"; # Define your hostname.
-
+      services.tailscale.enable = true;
       # conf pour bypass l'anticheat de gta
       networking.extraHosts = ''
         0.0.0.0 paradise-s1.battleye.com

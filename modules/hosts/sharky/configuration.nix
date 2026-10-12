@@ -28,7 +28,7 @@
         #self.nixosModules.minecraft-modding
 
         # Sandbox malware
-        #self.nixosModules.cape-sandbox
+        self.nixosModules.capev2
       ];
 
       # Settings propre à l'appareil
