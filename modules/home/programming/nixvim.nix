@@ -103,7 +103,10 @@
           };
         };
 
-        globals.mapleader = " ";
+        globals = {
+          mapleader = " ";
+          clipboard = "osc52";
+        };
         keymaps = [
           {
             mode = "n";

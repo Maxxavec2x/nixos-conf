@@ -62,6 +62,9 @@
 
           # emoji fallback
           symbol_map = "U+1F000-U+1FFFF Noto Color Emoji";
+
+          # Pour gérer le clipboard:
+          clipboard_control = "write-clipboard write-primary read-clipboard read-primary";
         };
 
         keybindings = {
