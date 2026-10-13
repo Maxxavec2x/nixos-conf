@@ -33,6 +33,10 @@
           bind -r J resize-pane -D 5
           bind -r K resize-pane -U 5
           bind -r L resize-pane -R 5
+
+          # Pour le copy pasting ssh:
+          set -s set-clipboard on
+          set -g allow-passthrough on
         '';
       };
     };
