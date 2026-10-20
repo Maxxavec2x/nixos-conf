@@ -28,9 +28,6 @@
         # minecraft
         prismlauncher
 
-        # wallpaper engine (steam app for animated wallpaper)
-        linux-wallpaperengine
-        inputs.linux-wallpaperengine-gui.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     };
 }

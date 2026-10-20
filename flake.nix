@@ -40,10 +40,6 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    linux-wallpaperengine-gui = {
-      url = "github:Maxxavec2x/linux-wallpaperengine-gui-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     capev2 = {
       url = "github:Maxxavec2x/CAPEv2";
       inputs.nixpkgs.follows = "nixpkgs";
