@@ -28,6 +28,8 @@
         # minecraft
         prismlauncher
 
+        #Emulateur
+        dolphin-emu
       ];
     };
 }
