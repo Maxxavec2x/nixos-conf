@@ -84,6 +84,16 @@
             };
           };
 
+          overview = {
+            zoom = 0.5;
+            scroll_factor_horizontal = 1.0;
+            scroll_factor_vertical = 1.0;
+            background_blur = true;
+            workspace_wallpaper = true;
+            shortcuts = true;
+            shortcut_keys = "qsdfghjklm";
+          };
+
           window_rule = [
             {
               match.app_id = "^kitty$";
