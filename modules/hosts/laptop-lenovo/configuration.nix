@@ -27,7 +27,7 @@
         self.nixosModules.myHomeManager
 
         # Pour le modding minecraft, active nix-ld notamment
-        self.nixosModules.minecraft-modding
+        #self.nixosModules.minecraft-modding
 
         # Sandbox malware
         #self.nixosModules.cape-sandbox

@@ -13,7 +13,7 @@
       home.packages = with pkgs; [
         appimage-run # pour démarrer les appimages
         protonup-qt
-        bottles
+        #bottles
         heroic
         #lutris
         #wineWowPackages.stable
