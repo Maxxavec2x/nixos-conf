@@ -20,6 +20,7 @@
         self.nixosModules.virtualization
         self.nixosModules.containers
         self.nixosModules.fonts
+        self.nixosModules.ca-security
 
         # Pour jouer a bigwalk avec microphone intégré
         self.nixosModules.audio_relay

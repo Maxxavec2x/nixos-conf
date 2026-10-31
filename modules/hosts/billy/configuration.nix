@@ -16,6 +16,7 @@
         self.nixosModules.virtualization
         self.nixosModules.containers
         self.nixosModules.fonts
+        self.nixosModules.ca-security
 
         # Les modules home manager sont importé depuis user/maxx.nix
         self.nixosModules.myHomeManager
