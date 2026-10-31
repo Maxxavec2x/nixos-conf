@@ -46,7 +46,7 @@
 
         self.homeModules.zeditor
         self.homeModules.helix
-        self.homeModules.minecraft-modding
+        #self.homeModules.minecraft-modding
 
         self.homeModules.virtualization
         self.homeModules.dark_mode
